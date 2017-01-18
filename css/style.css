@@ -1,0 +1,110 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+@import url(http://fonts.googleapis.com/css?family=Dancing+Script);
+body {
+	background-color: #EEE;
+}
+body,div,p,span {margin: 0;}
+h1,h2 {
+	font-family: 'Dancing Script', cursive;
+	margin: 0;
+	font-weight: normal;
+	font-size: 35px;
+}
+.caption {
+	font-size: 18px;
+	margin-top: 20px;
+	text-align: center;
+}
+header {
+	padding: 6px 15px;
+	background-color: rgba(0,0,0,0.8);
+	color: #FFF;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+h1 {
+	position: relative;
+	padding: 3px;
+	font-size:24px;
+	font-weight: normal;
+}
+h1::after {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: -1;
+	content: '';
+	width: 100%;
+	height: 10px;
+	background-color: #b6f0fc;
+}
+
+.sampleWrap {
+	border:1px solid #ddd;
+	padding: 15px;
+}
+input {
+	vertical-align: bottom;
+}
+.button {
+	position: relative;
+	-webkit-perspective: 300px;
+	perspective: 300px;
+}
+.button {
+	display: inline-block;
+	width: 200px;
+	height: 60px;
+	text-align: center;
+	text-decoration: none;
+	line-height: 60px;
+	outline: none;
+}
+
+.button span {
+	display: block;
+	position: absolute;
+	width: 200px;
+	height: 60px;
+	border: 2px solid #333;
+	text-align: center;
+	line-height: 56px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all .3s;
+	transition: all .3s;
+	pointer-events: none;
+}
+.button span:nth-child(1) {
+	background-color: #333;
+	color: #fff;
+	-webkit-transform: rotateX(90deg);
+	-moz-transform: rotateX(90deg);
+	transform: rotateX(90deg);
+	-webkit-transform-origin: 50% 50% -30px;
+	-moz-transform-origin: 50% 50% -30px;
+	transform-origin: 50% 50% -30px;
+}
+.button span:nth-child(2) {
+	background-color: #fff;
+	color: #333;
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+	-webkit-transform-origin: 50% 50% -30px;
+	-moz-transform-origin: 50% 50% -30px;
+	transform-origin: 50% 50% -30px;
+}
+.button:hover span:nth-child(1) {
+	-webkit-transform: rotateX(0deg);
+	-moz-transform: rotateX(0deg);
+	transform: rotateX(0deg);
+}
+.button:hover span:nth-child(2) {
+	background-color: #333;
+	-webkit-transform: rotateX(-90deg);
+	-moz-transform: rotateX(-90deg);
+	transform: rotateX(-90deg);
+}
